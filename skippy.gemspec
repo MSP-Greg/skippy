@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'thor', '~> 0.19'
 
   spec.add_development_dependency 'bundler', '~> 1.13'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'minitest', '~> 5.0'
   # TODO(thomthom): Need to lock to 2.3 because 2.4 fails with the custom
   # aruba build.
