@@ -30,6 +30,7 @@ jobs:
         ruby: [ 2.5, 2.7, 3.1 ]
         include:
           - { os: windows-2022 , ruby: ucrt  }
+          - { os: windows-2022 , ruby: mswin }
         exclude:
           # keep macos jobs to 5
           - { os: macos-11 , ruby: 3.1 }
