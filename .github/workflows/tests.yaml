@@ -34,6 +34,8 @@ jobs:
     steps:
       - name: repo checkout
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       - name: load ruby
         uses: ruby/setup-ruby-pkgs@v1
