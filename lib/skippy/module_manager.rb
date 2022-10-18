@@ -21,7 +21,7 @@ class Skippy::ModuleManager
     raise TypeError, 'expected a Project' unless project.is_a?(Skippy::Project)
 
     @project = project
-    @modules = SortedSet.new(discover_modules)
+    @modules = discover_modules.sort
   end
 
   # @yield [Skippy::LibModule]
@@ -58,7 +58,7 @@ class Skippy::ModuleManager
     target = vendor_path.join(lib_module.library.name, lib_module.path.basename)
 
     copy_module(lib_module, source, target)
-    @modules << lib_module
+    @modules.append(lib_module).sort!
 
     lib_module
   end

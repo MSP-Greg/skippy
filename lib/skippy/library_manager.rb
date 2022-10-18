@@ -33,7 +33,7 @@ class Skippy::LibraryManager
     raise TypeError, 'expected a Project' unless project.is_a?(Skippy::Project)
 
     @project = project
-    @libraries = SortedSet.new(discover_libraries)
+    @libraries = discover_libraries.sort
   end
 
   # @yield [Skippy::Library]
@@ -94,7 +94,7 @@ class Skippy::LibraryManager
     library = installer.install
 
     @libraries.delete(library)
-    @libraries << library
+    @libraries.append(library).sort!
 
     project.modules.update(library)
 
