@@ -4,7 +4,7 @@ $LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 require 'skippy'
 
 require 'minitest/autorun'
-require "minitest/reporters"
+#require "minitest/reporters"
 require 'pathname'
 # require 'pry' # TODO: What was this used for?
 require 'webmock/minitest'
@@ -16,8 +16,8 @@ require 'webmock/minitest'
 #
 # https://github.com/rubyworks/ansi/issues/36
 # https://github.com/rubyworks/ansi/pull/35
-$LOADED_FEATURES << 'Win32/Console/ANSI'
-Minitest::Reporters.use!
+#$LOADED_FEATURES << 'Win32/Console/ANSI'
+#Minitest::Reporters.use!
 
 class Skippy::Test < Minitest::Test
 
